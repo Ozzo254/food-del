@@ -1,13 +1,14 @@
-.header{
+.header {
     height: 34.2vw;
     margin: 30px auto;
     background: url('/header_img.png');
-    background-size: contain;
+    background-size: cover;
     position: relative;
     filter: brightness(94%);
     border-radius: 20px;
 }
-.header-contents{
+
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -18,17 +19,19 @@
     left: 6vw;
     animation: fadeIn 2.5s;
 }
-.header-contents h2{
+
+.header-contents h2 {
     font-weight: 500;
     color: wheat;
     font-size: max(4.5vw, 22px);
 }
-.header-contents p{
+
+.header-contents p {
     color: wheat;
     font-size: 1.2vw;
 }
 
-.header-contents button{
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
@@ -36,4 +39,59 @@
     background-color: wheat;
     font-size: max(1vw, 13px);
     border-radius: 50px;
+}
+
+@media (max-width:1050px) {
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px) {
+
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .header-contents {
+        max-width: 55%;
+    }
+
+    .header-contents h2 {
+        font-size: max(2.5vw, 12px);
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+
+}
+
+@media (max-width:255px) {
+
+    .header {
+        margin: 10px auto;
+    }
+
+    .header-contents {
+        max-width: 55%;
+        color: white;
+    }
+
+    .header-contents button {
+        display: none;
+    }
+
 }

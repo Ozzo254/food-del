@@ -6,11 +6,11 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
-  const addToCart = (itemId) => {
-    if (!cartItems[itemId]) {
-      setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+  const addToCart = (item_Id) => {
+    if (!cartItems[item_Id]) {
+      setCartItems((prev) => ({ ...prev, [item_Id]: 1 }));
     } else {
-      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+      setCartItems((prev) => ({ ...prev, [item_Id]: prev[item_Id] + 1 }));
     }
   };
 
