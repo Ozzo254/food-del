@@ -45,7 +45,7 @@
     ;
 }
 
-.navbar li {
+.navbar a {
     cursor: pointer;
     padding: 0.1vw;
     margin: 0.15vw;
